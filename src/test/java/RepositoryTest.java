@@ -48,9 +48,9 @@ public class RepositoryTest {
     public void testFindAllBoorSmartphone() {
         Repository repo = new Repository();
 
-        Smartphone smartphone1 = new Smartphone(5,"iPhone",150_000,"Apple");
-        Smartphone smartphone2 = new Smartphone(6,"Honor",40_000,"Huawei");
-        Smartphone smartphone3 = new Smartphone(7,"Realme",23_000,"Oppo");
+        Smartphone smartphone1 = new Smartphone(5, "iPhone", 150_000, "Apple");
+        Smartphone smartphone2 = new Smartphone(6, "Honor", 40_000, "Huawei");
+        Smartphone smartphone3 = new Smartphone(7, "Realme", 23_000, "Oppo");
 
         repo.add(smartphone1);
         repo.add(smartphone2);
@@ -66,9 +66,9 @@ public class RepositoryTest {
     public void testRemoveWhenIdExistedSmartphone() {
         Repository repo = new Repository();
 
-        Smartphone smartphone1 = new Smartphone(5,"iPhone",150_000,"Apple");
-        Smartphone smartphone2 = new Smartphone(6,"Honor",40_000,"Huawei");
-        Smartphone smartphone3 = new Smartphone(7,"Realme",23_000,"Oppo");
+        Smartphone smartphone1 = new Smartphone(5, "iPhone", 150_000, "Apple");
+        Smartphone smartphone2 = new Smartphone(6, "Honor", 40_000, "Huawei");
+        Smartphone smartphone3 = new Smartphone(7, "Realme", 23_000, "Oppo");
 
         repo.add(smartphone1);
         repo.add(smartphone2);
@@ -80,6 +80,5 @@ public class RepositoryTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
-
 
 }

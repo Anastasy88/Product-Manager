@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 public class ManagerTest {
     @Test
-
     public void testAddBook() {
         Repository repo = new Repository();
         Manager manager = new Manager(repo);
@@ -84,15 +83,14 @@ public class ManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
-    @Test
 
+    @Test
     public void testAddSmartphone() {
         Repository repo = new Repository();
         Manager manager = new Manager(repo);
-
-        Smartphone smartphone1 = new Smartphone(5,"iPhone",150_000,"Apple");
-        Smartphone smartphone2 = new Smartphone(6,"Honor",40_000,"Huawei");
-        Smartphone smartphone3 = new Smartphone(7,"Realme",23_000,"Oppo");
+        Smartphone smartphone1 = new Smartphone(5, "iPhone", 150_000, "Apple");
+        Smartphone smartphone2 = new Smartphone(6, "Honor", 40_000, "Huawei");
+        Smartphone smartphone3 = new Smartphone(7, "Realme", 23_000, "Oppo");
 
         manager.add(smartphone1);
         manager.add(smartphone2);
@@ -109,9 +107,9 @@ public class ManagerTest {
         Repository repo = new Repository();
         Manager manager = new Manager(repo);
 
-        Smartphone smartphone1 = new Smartphone(5,"iPhone",150_000,"Apple");
-        Smartphone smartphone2 = new Smartphone(6,"Honor",40_000,"Huawei");
-        Smartphone smartphone3 = new Smartphone(7,"Realme",23_000,"Oppo");
+        Smartphone smartphone1 = new Smartphone(5, "iPhone", 150_000, "Apple");
+        Smartphone smartphone2 = new Smartphone(6, "Honor", 40_000, "Huawei");
+        Smartphone smartphone3 = new Smartphone(7, "Realme", 23_000, "Oppo");
 
         manager.add(smartphone1);
         manager.add(smartphone2);
@@ -128,10 +126,10 @@ public class ManagerTest {
         Repository repo = new Repository();
         Manager manager = new Manager(repo);
 
-        Smartphone smartphone1 = new Smartphone(5,"iPhone",150_000,"Apple");
-        Smartphone smartphone2 = new Smartphone(6,"Honor",40_000,"Huawei");
-        Smartphone smartphone3 = new Smartphone(7,"Realme",23_000,"Oppo");
-        Smartphone smartphone4 = new Smartphone(5,"iPhone 14 PRO",150_000,"Apple");
+        Smartphone smartphone1 = new Smartphone(5, "iPhone", 150_000, "Apple");
+        Smartphone smartphone2 = new Smartphone(6, "Honor", 40_000, "Huawei");
+        Smartphone smartphone3 = new Smartphone(7, "Realme", 23_000, "Oppo");
+        Smartphone smartphone4 = new Smartphone(5, "iPhone 14 PRO", 150_000, "Apple");
 
         manager.add(smartphone1);
         manager.add(smartphone2);
@@ -149,9 +147,9 @@ public class ManagerTest {
         Repository repo = new Repository();
         Manager manager = new Manager(repo);
 
-        Smartphone smartphone1 = new Smartphone(5,"iPhone",150_000,"Apple");
-        Smartphone smartphone2 = new Smartphone(6,"Honor",40_000,"Huawei");
-        Smartphone smartphone3 = new Smartphone(7,"Realme",23_000,"Oppo");
+        Smartphone smartphone1 = new Smartphone(5, "iPhone", 150_000, "Apple");
+        Smartphone smartphone2 = new Smartphone(6, "Honor", 40_000, "Huawei");
+        Smartphone smartphone3 = new Smartphone(7, "Realme", 23_000, "Oppo");
 
         manager.add(smartphone1);
         manager.add(smartphone2);
@@ -162,5 +160,4 @@ public class ManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
-
 }
