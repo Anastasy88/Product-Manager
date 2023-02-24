@@ -1,9 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.netology.Book;
-import ru.netology.Product;
-import ru.netology.Repository;
-import ru.netology.Smartphone;
+import ru.netology.*;
 
 public class RepositoryTest {
 
@@ -36,7 +33,7 @@ public class RepositoryTest {
         repo.add(book1);
         repo.add(book2);
         repo.add(book3);
-        repo.remove(3);
+        repo.removeById(3);
 
         Product[] actual = repo.findAll();
         Product[] expected = {book1, book2};
@@ -73,7 +70,7 @@ public class RepositoryTest {
         repo.add(smartphone1);
         repo.add(smartphone2);
         repo.add(smartphone3);
-        repo.remove(7);
+        repo.removeById(7);
 
         Product[] actual = repo.findAll();
         Product[] expected = {smartphone1, smartphone2};
@@ -81,4 +78,21 @@ public class RepositoryTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void testRemoveWhenNotIdExistedSmartphone() {
+        Repository repo = new Repository();
+
+        Smartphone smartphone1 = new Smartphone(5, "iPhone", 150_000, "Apple");
+        Smartphone smartphone2 = new Smartphone(6, "Honor", 40_000, "Huawei");
+        Smartphone smartphone3 = new Smartphone(7, "Realme", 23_000, "Oppo");
+
+        repo.add(smartphone1);
+        repo.add(smartphone2);
+        repo.add(smartphone3);
+
+
+        Assertions.assertThrows(NotFoundException.class,
+                () -> repo.removeById(9)
+        );
+    }
 }

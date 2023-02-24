@@ -29,5 +29,6 @@ public class Manager {
     public boolean matches(Product product, String search) {
         return product.getName().contains(search);
     }
+
 }
 
